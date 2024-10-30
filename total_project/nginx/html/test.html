@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> "第一个网页"</title>
+		
+		<style>
+			body{color:red;}
+
+			.left{
+				float: left;
+				width: 50%;
+			}
+			.right{
+				float: right;
+				width: 50%;
+			}
+
+			.button{
+				background-color: #3498db;
+				color:#fff;
+				padding: 10px 20px;
+				text-align: center;
+				border-radius: 5px;
+			}
+			.button:hover{
+				background-color: #2980b9;
+			}
+
+		</style>
+		
+		<script>
+		// alert("hello world");
+		document.write("hello world!");
+
+		var name = "John";
+		var age = 30;
+		var isStudent = true;
+
+		console.log("Name: " + name);
+		console.log("Age: " + age);
+		console.log("Student: " + isStudent);
+		
+		var temp = 25;
+		if(temp > 30){
+			document.write("Hot Day!");
+		}
+		else if(temp > 20){
+			document.write("Warm Day!");
+		}
+		else{
+			document.write("Cold Day!");
+		}
+
+		for(var i = 1; i <= 5; i++){
+			document.write(i + "<br>");
+		}
+
+		function greet(name){
+			return "Hello, " + name + "!";
+		}
+		var greeting = greet("Alice");
+		document.write(greeting);
+
+
+		
+
+		</script>
+
+	</head>
+	<body>
+		<h1>我的第一个网页</h1>
+		<p>这是我创建的第一个网页</p>
+
+		<h1>水果</h1>
+		<ul>
+			<li> 苹果 </li>
+			<li> 香蕉</li>
+			<li> 橙子 </li>		
+		</ul>
+
+		<h1>访问我的<a href="https://www.baidu.com">网站</a></h1>
+
+		<h1>学生成绩单</h1>
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Math</th>
+				<th>English</th>
+			</tr>
+			<tr>
+				<td>XiaoMing</td>
+				<td>95</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td>XiaoHong</td>
+				<td>88</td>
+				<td>99</td>
+			</tr>
+		</table>
+
+
+		<div class = "left">
+			<p>LEFT</p>
+		</div>
+		<div class = "right">
+			<p>RIGHT</p>
+		</div>
+
+		<a href="$" class="button">hover me</a>
+
+		<button id = "myButton">Click me</button>
+
+		<script>
+			var button_t = document.getElementById("myButton");
+			button_t.addEventListener("click", function(){
+				alert("button has been clicked!");
+			})
+
+		</script>
+	</body>
+
+
+</html>

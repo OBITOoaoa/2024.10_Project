@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>文件列表</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th,td{
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th{
+                background-color: #f4f4f4;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>文件列表</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>文件名</th>
+                    <th>大小</th>
+                    <th>最后修改时间</th>
+                </tr>
+            </thead>
+            <tbody id = "file-list">
+                <!--文件列表将通过 JavaScript 填充-->
+            </tbody>
+        </table>
+
+        <script>
+            fetch('/json')
+            .then(response => response.json())
+            .then(files => {
+                const fileList = document.getElementById("file-list");
+                files.forEach(file => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><a href = "/photo${file.url}">${file.name}</a></td>
+                        <td>${file.size}</td>
+                        <td>${new Date(file.lastModified * 1000).toLocaleString()}</td>
+                        `;
+                        fileList.appendChild(row);
+                    });
+            });
+        </script>
+    </body>
+</html>
