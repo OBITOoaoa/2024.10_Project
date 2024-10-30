@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/up.png</file>
+        <file>images/settings.png</file>
+        <file>images/right.png</file>
+        <file>images/manual_model.png</file>
+        <file>images/left.png</file>
+        <file>images/file_manager.png</file>
+        <file>images/exception.png</file>
+        <file>images/down.png</file>
+        <file>images/capture.png</file>
+        <file>images/camera.png</file>
+        <file>images/auto_model.png</file>
+        <file>images/reset.png</file>
+        <file>images/password.png</file>
+        <file>images/login.png</file>
+        <file>images/menu.png</file>
+        <file>images/recording.png</file>
+        <file>images/video.png</file>
+        <file>images/photo.png</file>
+        <file>images/menu2.jpg</file>
+        <file>images/menu1.jpg</file>
+    </qresource>
+</RCC>
